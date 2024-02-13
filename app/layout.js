@@ -9,21 +9,25 @@ import Protection from "./Components/Protection";
 import { Suspense } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import {Analytics} from '@vercel/analytics/react'
+import { useEffect } from 'react';
+import Popup from "./Components/Popup";
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <title>Invictus DTU</title>
       <meta
         name="description"
-        content="india Largest Annual TechFest, Delhi Technological University 2024"
+        content="India's Largest Annual TechFest, Delhi Technological University 2024"
       />
       <link rel="icon" type="image/x-icon" href="static/favicon.ico"></link>
       <body className={inter.className}>
         <SessionProvider>
           <Protection />
           <Suspense fallback={<div>Loading...</div>}>
-            <Navbar />
+            
+          <Navbar />
           </Suspense>
           <SpeedInsights />
           {children}

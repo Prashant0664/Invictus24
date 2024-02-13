@@ -18,6 +18,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import "./swiper.css";
 import EventButton from "../Components/Buttons/eventButton";
+import Popup from "../Components/Popup";
 
 const Home = () => {
   const { data: session } = useSession();
@@ -55,6 +56,7 @@ const Home = () => {
 
   return (
     <main className="w-full sm:h-[400vh] overflow-auto max-sm:h-[300vh] bg-[#05063F]">
+        <Popup />
       <div className="w-full h-screen flex flex-col justify-center items-center">
         <img
           src="/bg_c.webp"
@@ -67,7 +69,7 @@ const Home = () => {
           <div className="w-fit flex flex-col gap-0 lg:mb-20 max-[1024px]:mb-10">
             {/* mb added for button*/}
             <div className="font-retrog text-white text-[4vw] xl:text-[2vw]">
-              10th-12th Feb ‘24
+              9th-12th Feb ‘24
             </div>
             {/* Leading added in INVICTUS */}
             <div className="font-karma text-[12vw] 2xl:text-[10vw] text-white tracking-wide mx-1 text-center leading-[12vw] 2xl:leading-[10vw]">
